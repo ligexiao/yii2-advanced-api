@@ -168,4 +168,8 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    public function actionHello()
+    {
+        echo 'hello';
+    }
 }

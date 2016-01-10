@@ -29,6 +29,11 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'request' => [
+            'enableCookieValidation' => true,
+            'enableCsrfValidation' => true,
+            'cookieValidationKey' => 'yabohe',
+        ],
     ],
     'params' => $params,
 ];
