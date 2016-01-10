@@ -20,15 +20,20 @@ class CountryController extends ActiveController
 {
     public $modelClass = 'api\modules\v1\models\Country';
 
-    public function behaviors1()// behaviors1->behaviors for test
+    public function behaviors()// behaviors1->behaviors for test
     {
-        return ArrayHelper::merge(parent::behaviors(),[
+        $pb = parent::behaviors();
+        $pb['contentNegotiator']['formats'] = [ 'application/json' => Response::FORMAT_JSON,];
+
+      /*  return ArrayHelper::merge(parent::behaviors(),[
             'contentNegotiator' => [
                 'formats' => [
+                    'application/xml' => Response::FORMAT_XML,
                     'application/json' => Response::FORMAT_JSON,
                 ],
             ],
-        ]);
+        ]);*/
+        return $pb;
     }
 
 /*
