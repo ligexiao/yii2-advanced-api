@@ -38,7 +38,7 @@ return [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule', 
-                    'controller' => ['v1/country','v1/person','v1/heyy'],
+                    'controller' => ['v1/country','v1/person','v1/heyy','v1/user','v1/post','v1/article','v1/articleinfo','v1/comment','v1/ccomment'],
                     'tokens' => [
                         '{id}' => '<id:\\w+>'
                     ]
@@ -54,7 +54,8 @@ return [
                 //if ($response->data !== null && Yii::$app->request->get('suppress_response_code')) {
                 if ($response->data !== null ) {
                     $response->data = [
-                        'success' => $response->isSuccessful,
+                        'code' => $response->isSuccessful ? 0 : -1,
+                        'message' => $response->isSuccessful ? 'ok' : 'error',
                         'data' => $response->data,
                     ];
                     $response->statusCode = 200;
