@@ -1,6 +1,7 @@
 <?php
 namespace api\modules\v1\models;
 use \yii\db\ActiveRecord;
+use Yii;
 /**
  * Article Model
  *
@@ -12,7 +13,7 @@ class Article extends ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return 'ne_posts_index';
+		return Yii::$app->params['notend_table_prefix'].'posts_index';
 	}
 
     /**

@@ -1,6 +1,7 @@
 <?php
 namespace api\modules\v1\models;
 use \yii\db\ActiveRecord;
+use Yii;
 /**
  * ArticleInfo Model
  *
@@ -12,7 +13,7 @@ class ArticleInfo extends ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return 'ne_question';
+		return Yii::$app->params['notend_table_prefix'].'question';
 	}
 
     /**

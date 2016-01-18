@@ -1,6 +1,7 @@
 <?php
 namespace api\modules\v1\models;
 use \yii\db\ActiveRecord;
+use Yii;
 /**
  * CComment Model
  * 对评论的评论
@@ -13,7 +14,7 @@ class CComment extends ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return 'ne_answer_comments';
+		return Yii::$app->params['notend_table_prefix'].'answer_comments';
 	}
 
     /**

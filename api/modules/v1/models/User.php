@@ -1,6 +1,7 @@
 <?php
 namespace api\modules\v1\models;
 use \yii\db\ActiveRecord;
+use Yii;
 /**
  * User Model
  *
@@ -12,7 +13,7 @@ class User extends ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return 'ne_users';
+		return Yii::$app->params['notend_table_prefix'].'users';
 	}
 
     /**

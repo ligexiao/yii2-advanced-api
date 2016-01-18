@@ -10,9 +10,9 @@ use yii\rest\ActiveController;
  * 注: 多音节的controller名称只能首字母大写,其他均为小写.
  *
  */
-class CommentController extends ActiveController
+class CcommentController extends ActiveController
 {
-    public $modelClass = 'api\modules\v1\models\Comment';
+    public $modelClass = 'api\modules\v1\models\CComment';
     public function serializeData($data){
         //$this->modelClass->validate();
         $ret = parent::serializeData($data);

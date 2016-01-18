@@ -1,6 +1,7 @@
 <?php
 namespace api\modules\v1\models;
 use \yii\db\ActiveRecord;
+use Yii;
 /**
  * Comment Model
  *
@@ -12,7 +13,7 @@ class Comment extends ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return 'ne_answer';
+		return Yii::$app->params['notend_table_prefix'].'answer';
 	}
 
     /**
