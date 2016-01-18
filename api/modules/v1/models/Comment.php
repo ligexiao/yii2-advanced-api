@@ -81,7 +81,7 @@ class Comment extends ActiveRecord
     // Get comments of the current comment
     public function getCcomment()
     {
-        return $this->hasMany(Ccomment::className(), ['answer_id' => 'answer_id'])
+        return $this->hasMany(CComment::className(), ['answer_id' => 'answer_id'])
             ->asArray();
     }
 
