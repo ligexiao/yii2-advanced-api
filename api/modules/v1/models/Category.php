@@ -3,10 +3,10 @@ namespace api\modules\v1\models;
 use \yii\db\ActiveRecord;
 use Yii;
 /**
- * Post Model
+ * Category Model
  *
  */
-class Post extends ActiveRecord
+class Category extends ActiveRecord
 {
 	/**
 	 * @inheritdoc

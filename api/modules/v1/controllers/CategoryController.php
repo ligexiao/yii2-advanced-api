@@ -5,13 +5,13 @@ namespace api\modules\v1\controllers;
 use yii\rest\ActiveController;
 
 /**
- * Post Controller API
+ * Category Controller API
  * 文章分类信息
  *
  */
-class PostController extends ActiveController
+class CategoryController extends ActiveController
 {
-    public $modelClass = 'api\modules\v1\models\Post'; //model to be used as a resource
+    public $modelClass = 'api\modules\v1\models\Category'; //model to be used as a resource
 
     public function serializeData($data){
         //$this->modelClass->validate();

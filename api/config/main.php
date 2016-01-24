@@ -38,7 +38,7 @@ return [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule', 
-                    'controller' => ['v1/country','v1/person','v1/heyy','v1/user','v1/post','v1/article','v1/articleinfo','v1/comment','v1/ccomment'],
+                    'controller' => ['v1/country','v1/person','v1/heyy','v1/user','v1/category','v1/article','v1/articleinfo','v1/comment','v1/ccomment'],
                     'extraPatterns' => ['GET search' => 'search'],
                     'tokens' => [
                         '{id}' => '<id:\\w+>'
